@@ -26,6 +26,26 @@
    cursor: pointer;
  }
  
+ /*total items*/
+ .cart-items-total {
+   background-color: red;
+   color: white;
+   border-radius: 50%;
+   font-size: 12px;
+   padding: 4px;
+   top: 37px;
+   right: 14px;
+   position: absolute;
+ }
+ /*este es el css de cart que ya te habia pasado, y ahora va el de productos*/
+ .product-card-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: 50px;
+   text-align: center;
+ }
+ 
  .card {
    display: flex;
    flex-direction: column;
@@ -80,5 +100,12 @@
 
 
 
+@media screen and (max-width: 768px) {
+  /* Estilos específicos para pantallas más pequeñas */
+  .card {
+    flex-basis: 50%; /* Hace que las cards ocupen el 50% del ancho en pantallas pequeñas */
+    width: 100%; /* Hace que las imágenes ocupen todo el ancho disponible dentro de la card */
+  }
+}
 
  
