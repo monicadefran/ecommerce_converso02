@@ -4,6 +4,7 @@
    grid-gap: 1rem;
    margin: 0 auto;
    justify-items: center;
+   border: #1bcb7f;
  }
  
  .cartTotal {
