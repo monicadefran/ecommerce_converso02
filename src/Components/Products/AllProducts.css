@@ -1,9 +1,9 @@
 .cartContent {
    display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Crea columnas automáticas con un ancho mínimo de 300px */
-  grid-gap: 1rem; /* Agrega un espacio entre las cartas */
-  margin: 0 auto;
-  justify-items: center; /* Centra las cartas horizontalmente */
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   grid-gap: 1rem;
+   margin: 0 auto;
+   justify-items: center;
  }
  
  .cartTotal {
@@ -27,44 +27,37 @@
  }
  
  .card {
-display: grid;
-  width: 100%;
-  grid-template-areas:
-    "imagen"
-    "contenido"
-    "boton"
-    "boton2";
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  text-overflow: ellipsis;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background-color: #fff;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   text-align: center;
  }
 
  .card img {
-grid-area: imagen;
+
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 5px 5px 0 0;
 
+
  }
  
  .card button {
-   grid-area: boton;
-  align-self: center;
-  justify-self: center;
-  margin-top: 10px;
-  border: none;
-  outline: 0;
-  padding: 10px;
-  color: white;
-  background-color: #1bcb7f;
-  text-align: center;
-  cursor: pointer;
-  font-size: 15px;
+   margin-top: 10px;
+   border: none;
+   outline: 0;
+   padding: 10px;
+   color: white;
+   background-color: #1bcb7f;
+   text-align: center;
+   cursor: pointer;
+   font-size: 15px;
  }
 
  .card button:hover {
@@ -72,19 +65,20 @@ grid-area: imagen;
  }
 
  .product-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 50px;
-  text-align: center;
-}
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   grid-gap: 1rem;
+   justify-items: center;
+   margin: 50px;
+   text-align: center;
+ }
 
-.card {
-  flex: 0 0 200px; /* Establece un ancho fijo para las cards */
-  margin: 20px;
-}
+ .card {
+   flex: 1;
+   margin: 20px;
+ }
 
-/* Otros estilos de las cards */
+
 
 
  
