@@ -11,19 +11,19 @@ import home3 from '../../Assets/home3.jpg';
 function Hero() {
    return (
     <Box sx={{ maxWidth: 360, padding: 5, margin: "0 auto" }}>
-    <Carousel>
-       <div>
-          <img src={home1} alt="sneaker1" />
-       </div>
-       <div>
-          <img src={home2} alt="sneaker2" />
-       </div>
-       <div>
-          <img src={home3} alt="sneaker3" />
-       </div>
+      <Carousel>
+          <div>
+            <img src={home1} alt="sneaker1" />
+          </div>
+         <div>
+            <img src={home2} alt="sneaker2" />
+         </div>
+         <div>
+            <img src={home3} alt="sneaker3" />
+         </div>  
     </Carousel>
- </Box>
-)
+   </Box>
+   )
 }
 
 export default Hero;

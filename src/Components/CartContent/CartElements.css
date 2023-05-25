@@ -1,0 +1,38 @@
+.cartContent {
+   display: inline-block;
+   width: 25%;
+   padding: 10px;
+   text-align: center;
+ }
+ 
+ .cartContent img {
+   width: 100%;
+   max-height: 150px;
+   object-fit: cover;
+ }
+ 
+ .cartContent h3 {
+   margin-top: 10px;
+ }
+ 
+ .cartContent h4 {
+   margin-top: 30px;
+ }
+ 
+ .cartContent .cart-delete-button {
+   cursor: pointer;
+   color: red;
+ }
+ 
+ /* Additional styles to ensure 4 products per row */
+ @media (max-width: 768px) {
+   .cartContent {
+     width: 50%;
+   }
+ }
+ 
+ @media (max-width: 480px) {
+   .cartContent {
+     width: 100%;
+   }
+ }
