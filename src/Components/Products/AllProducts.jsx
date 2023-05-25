@@ -13,7 +13,7 @@ const { data, buyProduct } = useContext (DataContext);
       return (
          <div className="card container-articulo1" key={product.id}>
             <div className="container-img1"><img src={product.image} alt="product"/></div>
-            <div className="texto1"><h3>{product.name}</h3>
+            <div className="texto1"><h3>{product.title}</h3>
             <h4>{product.price}</h4></div>
             <button onClick={()=> buyProduct(product)}>Add To Cart</button>
          </div>

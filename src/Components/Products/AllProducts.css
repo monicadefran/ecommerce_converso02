@@ -45,14 +45,20 @@
  /*este es el css de cart que ya te habia pasado, y ahora va el de productos*/
  .product-card-container {
    display: flex;
-   justify-content: space-around;
    flex-wrap: wrap;
+   justify-content: center;
    margin: 50px;
    text-align: center;
  }
  
  .card {
-   margin: 50px;
+   flex: 0 0 200px; /* Establece un ancho fijo para las cards */
+   margin: 20px;
+ }
+
+ .card img {
+   height: 150px; /* Establece la altura deseada para las imágenes */
+   object-fit: cover; /* Ajusta la imagen dentro del contenedor */
  }
  
  .card button {
@@ -63,11 +69,36 @@
    background-color: #1bcb7f;
    text-align: center;
    cursor: pointer;
-   width: 100%;
    font-size: 15px;
  }
 
  .card button:hover {
    opacity: 0.7;
  }
+
+ .product-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px;
+  text-align: center;
+}
+
+.card {
+  flex: 0 0 200px; /* Establece un ancho fijo para las cards */
+  margin: 20px;
+}
+
+
+
+/* Otros estilos de las cards */
+
+@media screen and (max-width: 768px) {
+  /* Estilos específicos para pantallas más pequeñas */
+  .card {
+    flex-basis: 50%; /* Hace que las cards ocupen el 50% del ancho en pantallas pequeñas */
+    width: 100%; /* Hace que las imágenes ocupen todo el ancho disponible dentro de la card */
+  }
+}
+
  
