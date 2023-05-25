@@ -41,10 +41,10 @@ const BannerTop = () => {
             style={{ width: 24, height: 24, marginRight: 8 }}
         />
       
-        <BannerText variant="h6">
+      </Box>
+      <BannerText variant="h6">
           -15% PARA NUEVOS CLIENTES ¡REGISTRATE AHORA!
         </BannerText>
-      </Box>
       <Link href="/ayuda" color="inherit">
         Ayuda
       </Link>
