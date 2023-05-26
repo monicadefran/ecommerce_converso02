@@ -1,7 +1,7 @@
 import React from 'react';
 import cajaEnvio from '../../Assets/cajaEnvio.jpg';
-import devolucion from '../../Assets/devolucion.jpg';
-import calendario from '../../Assets/calendario.jpg';
+import devolucion from '../../Assets/devolucion.png';
+import calendario from '../../Assets/calendario.png';
 
 /*import "./Footer.css";*/
 

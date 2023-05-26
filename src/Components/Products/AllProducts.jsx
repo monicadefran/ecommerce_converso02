@@ -9,7 +9,11 @@ import "./AllProducts.css";
 function AllProducts() {
 const { data, buyProduct } = useContext (DataContext);
 
-   return data.map((product)=>{
+   return (
+      <>
+   <div className="container-allProducts">
+{
+   data.map((product)=>{
       return (
          <div className="cartContent">
             <div className="card" key={product.id}>
@@ -24,6 +28,10 @@ const { data, buyProduct } = useContext (DataContext);
 
       )
    })
+}
+   </div>
+   </>
+   ) 
 };
 
 export default AllProducts;
