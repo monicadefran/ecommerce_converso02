@@ -22,11 +22,17 @@ const CartElements = () => {
     return cart.map((product)=>{
         return (
             <div className="cartContent" key={product.id}>
-                <img src={product.image} alt="product-cart"/>
-                <h3>{product.title}</h3>
-                <CartItemCounter product={product} quanty={product.quanty}/>
-                <h4>{product.price * product.quanty}</h4>
-                <h3 className="cart-delete-button" onClick={() => deleteProduct(product.id)}>X</h3>
+                <div className="cartItem">
+                    <div className="img_titel">
+                        <img src={product.image} alt="product-cart"/>
+                        <h3>{product.title}</h3>
+                    </div>
+                    <div className="buttom_quantity">
+                        <CartItemCounter product={product} quanty={product.quanty}/>
+                        <h4>€{product.price * product.quanty}</h4>
+                        <button className="cart-delete-button" onClick={() => deleteProduct(product.id)}>X</button>
+                    </div>
+                </div>
             </div>
         );
     });
