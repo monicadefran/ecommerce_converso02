@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import { DataContext } from '../../Context/ConversoContext';
-import React, { useContext, useState } from "react";
-import { DataContext } from '../../Context/ConversoContext';
+
+
+
 import "./AllProducts.css";
 
 function AllProducts() {
