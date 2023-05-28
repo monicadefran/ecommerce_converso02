@@ -1,9 +1,6 @@
+
 import React, { useContext, useState } from "react";
 import { DataContext } from '../../Context/ConversoContext';
-
-
-import {useContext} from "react";
-import {DataContext} from '../../Context/ConversoContext';
 import { Link } from "react-router-dom";
 
 import "./AllProducts.css";
