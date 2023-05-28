@@ -40,12 +40,15 @@ const [likedProducts, setLikedProducts] = useState([]);
                 {getHeartEmoji(product.id)}
               </span>
             </span>
+
             <div className="container-img">
-              <img src={product.image} alt="product" />
+               <Link to={`/Details/${product.id}`}>
+                  <img src={product.image} alt="product"/>
+               </Link>
             </div>
             <div className="texto">
-              <h3>{product.title}</h3>
-              <h4>€{product.price}</h4>
+               <Link><h3>{product.title}</h3></Link>
+               <h4>€{product.price}</h4>
             </div>
             <button onClick={() => buyProduct(product)}>Add To Cart</button>
           </div>
