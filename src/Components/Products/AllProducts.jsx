@@ -5,6 +5,7 @@ import { DataContext } from '../../Context/ConversoContext';
 
 import "./AllProducts.css";
 
+
 function AllProducts() {
 const { data, buyProduct } = useContext (DataContext);
 
