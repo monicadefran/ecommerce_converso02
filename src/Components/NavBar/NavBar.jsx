@@ -15,7 +15,8 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
+import TotalItems from '../CartContent/TotalItems';
 
 const drawerWidth = 240;
 
@@ -105,7 +106,7 @@ export default function NavBar() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', fontWeight: 'bold', color:'black' } }}
           >
-            CONVERSO
+            <Link to='/'>CONVERSO</Link>
           </Typography>
            {/* Search bar */}
           <Search>
@@ -120,7 +121,7 @@ export default function NavBar() {
           <IconsWrapper>
             <IconButton>
               {/* Adding the fake number elements  */}
-              <Badge badgeContent={4} color="success">
+              <Badge badgeContent={<TotalItems />} color="success">
               <Link to={"/Cart"}><ShoppingCartIcon /></Link>
               </Badge>
             </IconButton>
