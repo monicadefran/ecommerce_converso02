@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { DataContext } from '../../Context/ConversoContext';
+
 
 import {useContext} from "react";
 import {DataContext} from '../../Context/ConversoContext';
