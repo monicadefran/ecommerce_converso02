@@ -1,9 +1,6 @@
+
 import React, { useContext, useState } from "react";
 import { DataContext } from '../../Context/ConversoContext';
-
-
-import {useContext} from "react";
-import {DataContext} from '../../Context/ConversoContext';
 import { Link } from "react-router-dom";
 
 import "./AllProducts.css";
@@ -28,49 +25,36 @@ const [likedProducts, setLikedProducts] = useState([]);
       return "🤍";
     }
   };
-  return (
-   <>
-     <div className="container-allProducts">
-       {data.map((product) => (
-         <ProductCard
-           key={product.id}
-           product={product}
-           buyProduct={buyProduct}
-         />
-       ))}
-     </div>
-   </>
- );
-}
 
-function ProductCard({ product, buyProduct }) {
- const [showText, setShowText] = useState(false);
+   return (
+      <>
+   <div className="container-allProducts">
+   {data.map((product) => {
+      const isLiked = likedProducts.includes(product.id);
 
- const handleBuyProduct = () => {
-   buyProduct(product);
-   setShowText(true);
-   setTimeout(() => {
-     setShowText(false);
-   }, 2000);
- };
-
- return (
-   <div className="cartContent">
-     <div className="card">
-       <div className="container-img">
-         <img src={product.image} alt="product" />
-       </div>
-       <div className="texto">
-         <h3>{product.title}</h3>
-         <h4>€{product.price}</h4>
-       </div>
-       <button className="move" onClick={handleBuyProduct}>
-         Add To Cart
-       </button>
-       {showText && <div>Producto agregado al carrito</div>}
-     </div>
+      return (
+        <div className="cartContent" key={product.id}>
+          <div className="card">
+            <span onClick={() => handleLike(product.id)} className="heart-icon-container">
+              <span className={isLiked ? 'heart-icon-red' : 'heart-icon'}>
+                {getHeartEmoji(product.id)}
+              </span>
+            </span>
+            <div className="container-img">
+              <img src={product.image} alt="product" />
+            </div>
+            <div className="texto">
+              <h3>{product.title}</h3>
+              <h4>€{product.price}</h4>
+            </div>
+            <button onClick={() => buyProduct(product)}>Add To Cart</button>
+          </div>
+        </div>
+      );
+    })}
    </div>
- );
-}
+   </>
+   ) 
+};
 
 export default AllProducts;
