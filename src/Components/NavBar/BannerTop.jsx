@@ -38,7 +38,7 @@ const BannerTop = () => {
           <img
             src= {bandera}
             alt="Bandera de España"
-            style={{ width: 24, height: 24, marginRight: 8 }}
+            style={{ width: 32, height: 24, marginLeft: 10 }}
         />
       
       </Box>
