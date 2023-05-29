@@ -45,6 +45,7 @@
    font-weight: bold;
    background: rgb(65,196,129);
 
+
  }
  
  /*delete-button*/
@@ -107,6 +108,26 @@
   background-color: green;
 }
 
+.move {
+ position: relative;
+}
+
+.move:active {
+ animation: moveButton 0.3s linear;
+}
+
+@keyframes moveButton {
+ 0% {
+   transform: translateY(0);
+ }
+ 50% {
+   transform: translateY(15px);
+ }
+ 100% {
+   transform: translateY(0);
+ }
+}
+
  .texto{
   text-align: center;
   
@@ -114,6 +135,7 @@
 button{
   margin: 30px;
 }
+
  .card button:hover {
    opacity: 0.7;
  }
@@ -126,6 +148,21 @@ button{
    margin: 50px;
    text-align: center;
  }
+
+ span{
+  text-align: start;
+  cursor: pointer;
+  font-size: 40px;
+ }
+ .lheart-icon {
+  cursor: pointer;
+  
+}
+
+.lheart-icon-red {
+  cursor: pointer;
+  color: red;
+}
 
  
 
