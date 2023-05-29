@@ -101,7 +101,7 @@
    background: rgb(65,196,129);
    background: linear-gradient(90deg, rgba(65,196,129,1) 0%, rgba(148,200,178,1) 35%, rgba(112,209,172,1) 100%);
    cursor: pointer;
-   font-size: 5px;
+   font-size: 15px;
  }
  
  .button-animation.clicked {
