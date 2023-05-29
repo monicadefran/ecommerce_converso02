@@ -14,11 +14,11 @@ const CartProducts = () =>{
     </>
     ): (
 
-      <><img className="emptyCart" src={imagen} alt="" /><><h2>
-
-          No dejes tu carro vacío.
-        </h2><h3>Echa un vistazo a tus favoritos,
-          compra lo nuevo y lo mejor o personaliza unas Converse clásicas.</h3></></>
+      <div className="containerCart" style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", marginTop: "150px", marginBottom: "100px", gap: "10px" }}>
+      <img className="emptyCart" src={imagen} alt="" />
+      <h2>No dejes tu carro vacío.</h2>
+      <h3>Echa un vistazo a tus favoritos, compra lo nuevo y lo mejor o personaliza unas Converse clásicas.</h3>
+    </div>
     );
 };
 
