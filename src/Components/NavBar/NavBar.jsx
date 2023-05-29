@@ -17,6 +17,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import { Link } from "react-router-dom";
 import TotalItems from '../CartContent/TotalItems';
+import { Button } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const drawerWidth = 240;
 
@@ -64,6 +66,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#2a2929',
+    },
+    typography: {
+      fontSize: '1.2rem',
+    },
+
+}});
+
 const IconsWrapper = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -101,12 +114,15 @@ export default function NavBar() {
             <MenuIcon/>
           </IconButton>
           <Typography
-            variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', fontWeight: 'bold', color:'black' } }}
           >
-            <Link to='/'>CONVERSO</Link>
+            <ThemeProvider theme={theme}>
+            <Button color='primary' varian ='outline' component={Link} to='/'>
+              CONVERSO
+            </Button>
+            </ThemeProvider>
           </Typography>
            {/* Search bar */}
           <Search>
@@ -141,9 +157,8 @@ export default function NavBar() {
       >
         <DrawerContainer>
           <List>
-            <ListItem button>
-            <Link to={"/Products"}><ListItemText primary="Mujer" /></Link>
-              
+            <ListItem Button component={Link} to= "/Products" >
+              <ListItemText primary="Mujer" />
             </ListItem>
             <ListItem button>
               <ListItemText primary="Hombre" />
