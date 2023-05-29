@@ -6,6 +6,7 @@ import youtube from '../../Assets/youtube.png';
 import tiktok from '../../Assets/tiktok.png';
 import facebook from '../../Assets/fb.png';
 import iconoCopy from '../../Assets/iconoCopy.jpg';
+import './Footer.css';
 
 function Socials() {
   return (
@@ -40,9 +41,9 @@ function Socials() {
         </div>
 
         <div className="fcopy">
-        <Box width="10px" height="10px" style={{ marginRight: '40px', marginTop: '8px' }}>
+        
           <img className="imgcopy" src={iconoCopy} alt="#" />
-          </Box>
+      
           <p>2023 Converso</p>
         </div>
       </div>
