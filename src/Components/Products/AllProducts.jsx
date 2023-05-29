@@ -1,45 +1,63 @@
 
 import React, { useContext, useState } from "react";
 import { DataContext } from '../../Context/ConversoContext';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./AllProducts.css";
 
-// const AllProducts = () => {
-//   const { data, buyProduct } = useContext(DataContext);
-//   const [addedToCart, setAddedToCart] = useState([]);
-
-//   const handleAddToCart = (product) => {
-//     buyProduct(product);
-//     setAddedToCart((prevAddedToCart) => [...prevAddedToCart, product.id]);
-//   }
 
 function AllProducts() {
 const { data, buyProduct } = useContext (DataContext);
+const [likedProducts, setLikedProducts] = useState([]);
+
+  const handleLike = (productId) => {
+    if (likedProducts.includes(productId)) {
+      setLikedProducts(likedProducts.filter((id) => id !== productId));
+    } else {
+      setLikedProducts([...likedProducts, productId]);
+    }
+  };
+
+  const getHeartEmoji = (productId) => {
+    if (likedProducts.includes(productId)) {
+      return "❤️";
+    } else {
+      return "🤍";
+    }
+  };
 
    return (
       <>
    <div className="container-allProducts">
-{
-   data.map((product)=>{
+   {data.map((product) => {
+      const isLiked = likedProducts.includes(product.id);
+
       return (
-         <div className="cartContent">
-            <div className="card" key={product.id}>
-            <div className="container-img"><img src={product.image} alt="product"/></div>
-            <div className="texto"><h3>{product.title}</h3>
-            <h4>€{product.price}</h4></div>
-            <button onClick={()=> buyProduct(product)}>Add To Cart</button>
-         </div>
+        <div className="cartContent" key={product.id}>
+          <div className="card">
+            <span onClick={() => handleLike(product.id)} className="heart-icon-container">
+              <span className={isLiked ? 'heart-icon-red' : 'heart-icon'}>
+                {getHeartEmoji(product.id)}
+              </span>
+            </span>
 
-         </div>
-         
-
-      )
-   })
-}
+            <div className="container-img">
+               <Link to={`/Details/${product.id}`}>
+                  <img src={product.image} alt="product"/>
+               </Link>
+            </div>
+            <div className="texto">
+               <Link><h3>{product.title}</h3></Link>
+               <h4>€{product.price}</h4>
+            </div>
+            <button onClick={() => buyProduct(product)}>Add To Cart</button>
+          </div>
+        </div>
+      );
+    })}
    </div>
    </>
    ) 
-}
+};
 
 export default AllProducts;
