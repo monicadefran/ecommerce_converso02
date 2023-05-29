@@ -107,6 +107,7 @@ export default function NavBar() {
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', fontWeight: 'bold', color:'black' } }}
           >
             <Link to='/'>CONVERSO</Link>
+
           </Typography>
            {/* Search bar */}
           <Search>
