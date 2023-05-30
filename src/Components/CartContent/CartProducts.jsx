@@ -3,7 +3,7 @@ import { DataContext } from "../../Context/ConversoContext";
 
 import CartElements from "./CartElements";
 import CartTotal from "./CartTotal";
-
+import imagen from "../../Assets/emptyCart.jpg"
 
 const CartProducts = () =>{
    const { cart } = useContext(DataContext);
@@ -13,7 +13,12 @@ const CartProducts = () =>{
     <CartTotal />
     </>
     ): (
-      <h2>Cart is empty</h2>
+
+      <><img className="emptyCart" src={imagen} alt="" /><><h2>
+
+          No dejes tu carro vacío.
+        </h2><h3>Echa un vistazo a tus favoritos,
+          compra lo nuevo y lo mejor o personaliza unas Converse clásicas.</h3></></>
     );
 };
 

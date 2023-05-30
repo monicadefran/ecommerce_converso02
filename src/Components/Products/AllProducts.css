@@ -101,6 +101,10 @@
    cursor: pointer;
    font-size: 15px;
  }
+ 
+ .button-animation.clicked {
+  background-color: green;
+}
 
 .move {
  position: relative;
@@ -125,6 +129,7 @@
  .texto{
   text-align: center;
   height: 140px;
+
  }
 button{
   margin: 30px;
