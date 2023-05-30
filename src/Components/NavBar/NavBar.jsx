@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React, { useState } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,11 +15,10 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
 import TotalItems from '../CartContent/TotalItems';
 
 const drawerWidth = 240;
-
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -77,15 +76,22 @@ const DrawerContainer = styled('div')({
   width: drawerWidth,
 });
 
-
-
 export default function NavBar() {
-
+  const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [searchText, setSearchText] = useState('');
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
-  }; 
+  };
+
+  const handleSearch = (e) => {
+    if (e.key === 'Enter') {
+      // Redirect to Products page with search query
+      navigate(`/Products?search=${encodeURIComponent(searchText)}`);
+      setSearchText('');
+    }
+  };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -94,36 +100,45 @@ export default function NavBar() {
           <IconButton
             size="large"
             edge="start"
-            onClick={handleDrawerToggle} // Asignar la función al evento onClick
+            onClick={handleDrawerToggle}
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon/>
+            <MenuIcon />
           </IconButton>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', fontWeight: 'bold', color:'black' } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'none', sm: 'block' },
+              fontWeight: 'bold',
+              color: 'black',
+            }}
           >
-            <Link to='/'>CONVERSO</Link>
-
+            <Link to="/">CONVERSO</Link>
           </Typography>
-           {/* Search bar */}
+          {/* Search bar */}
           <Search>
             <SearchIconWrapper>
-              <SearchIcon/>
+              <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              onKeyPress={handleSearch}
             />
           </Search>
           <IconsWrapper>
             <IconButton>
               {/* Adding the fake number elements  */}
               <Badge badgeContent={<TotalItems />} color="success">
-              <Link to={"/Cart"}><ShoppingCartIcon /></Link>
+                <Link to="/Cart">
+                  <ShoppingCartIcon />
+                </Link>
               </Badge>
             </IconButton>
             <IconSeparator />
@@ -135,16 +150,17 @@ export default function NavBar() {
       </AppBar>
       <Drawer
         anchor="left"
-        open={drawerOpen} // Utilizar el estado para controlar la apertura/cierre del Drawer
-        onClose={handleDrawerToggle} // Asignar la función al evento onClose
+        open={drawerOpen}
+        onClose={handleDrawerToggle}
         variant="temporary"
         sx={{ width: drawerWidth }}
       >
         <DrawerContainer>
           <List>
             <ListItem button>
-            <Link to={"/Products"}><ListItemText primary="Mujer" /></Link>
-              
+              <Link to="/Products">
+                <ListItemText primary="Mujer" />
+              </Link>
             </ListItem>
             <ListItem button>
               <ListItemText primary="Hombre" />
@@ -166,8 +182,6 @@ export default function NavBar() {
             </ListItem>
           </List>
         </DrawerContainer>
-      
-       
       </Drawer>
     </Box>
   );
