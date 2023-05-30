@@ -104,7 +104,7 @@ export default function NavBar() {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', fontWeight: 'bold', color:'black' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', fontWeight: 'bold', color:'black', marginLeft: 60 } }}
           >
             <Link to='/'>CONVERSO</Link>
           </Typography>
