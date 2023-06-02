@@ -5,6 +5,7 @@
     "image": "./AssetsJSON/Img/1.png",
     "title":"Chuck 70 Patchwork Floral",
     "price":100,
+    "category": "Mujer",
     "style":"MUJER ZAPATILLAS HIGH TOP",
     "quanty":1
     },
@@ -15,6 +16,7 @@
     "image": "./AssetsJSON/Img/2.png",
     "title":"Chuck Taylor All Star Embroidered Floral",
     "price":75,
+    "category": "Mujer",
     "style":"MUJER ZAPATILLAS LOW TOP",
     "quanty":1
     },
@@ -24,6 +26,7 @@
     "image": "./AssetsJSON/Img/3.png",
     "title":"Run Star Hike Platform Embroidered Floral",
     "price":130,
+    "category": "Mujer",
     "style":"MUJER ZAPATILLAS HIGH TOP",
     "quanty":1
     },
@@ -33,6 +36,7 @@
     "image": "./AssetsJSON/Img/4.png",
     "title":"Custom Chuck Taylor All Star By You",
     "price":65,
+    "category": "Niños",
     "style":"NIÑOS ZAPATILLAS HIGH TOP",
     "quanty":1
     },
@@ -42,6 +46,7 @@
     "image": "./AssetsJSON/Img/5.png",
     "title":"Chuck Taylor All Star Silver-Gold ",
     "price":120,
+    "category": "Mujer",
     "style":"MUJER ZAPATILLAS HIGH TOP",
     "quanty":1
     },
@@ -51,6 +56,7 @@
     "image": "./AssetsJSON/Img/6.png",
     "title":"Chuck Hero Patchwork Marvel ",
     "price":150,
+    "category": "Unisex",
     "style":"UNISEX ZAPATILLAS HIGH TOP",
     "quanty":1
     },
@@ -60,6 +66,7 @@
     "image": "./AssetsJSON/Img/7.jpg",
     "title":"Converse x Comme des Garçons PLAY Chuck 70",
     "price":150,
+    "category": "Unisex",
     "style":"UNISEX ZAPATILLAS HIGH TOP",
     "quanty":1
         },
@@ -70,6 +77,7 @@
     "image": "./AssetsJSON/Img/8.jpg",
     "title":"Chuck Taylor All Star Platform Canvas",
     "price":85,
+    "category": "Mujer",
     "style":"MUJER ZAPATILLAS LOW TOP",
     "quanty":1
         },
@@ -79,6 +87,7 @@
     "image": "./AssetsJSON/Img/9.jpg",
     "title":"Chuck Taylor All Star Pride",
     "price":80,
+    "category": "Unisex",
     "style":"UNISEX ZAPATILLAS HIGH TOP",
     "quanty":1
         },
@@ -88,6 +97,7 @@
     "image": "./AssetsJSON/Img/10.jpg",
     "title":"Chuck Taylor All Star Move Platform Tortoise",
     "price":90,
+    "category": "Mujer",
     "style":"MUJER ZAPATILLAS HIGH TOP",
     "quanty":1
         },
@@ -97,6 +107,7 @@
     "image": "./AssetsJSON/Img/11.jpg",
     "title":"Chuck 70 De Luxe Heel Pride",
     "price":140,
+    "category": "Mujer",
     "style":"MUJER ZAPATILLAS HIGH TOP",
     "quanty":1
         },
@@ -106,6 +117,7 @@
     "image": "./AssetsJSON/Img/12.jpg",
     "title":"Star Player 76 Premium Canvas",
     "price":75,
+    "category": "Unisex",
     "style":"UNISEX ZAPATILLAS LOW TOP",
     "quanty":1
         }

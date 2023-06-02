@@ -19,9 +19,7 @@
  span{
   text-align: start;
   cursor: pointer;
-  font-size: 15px;
-  font-weight: 550;
-
+  font-size: 20px;
  }
  .lheart-icon {
   cursor: pointer;
@@ -130,7 +128,8 @@
 
  .texto{
   text-align: center;
-  
+  height: 140px;
+
  }
 button{
   margin: 30px;
@@ -152,7 +151,7 @@ button{
  span{
   text-align: start;
   cursor: pointer;
-  font-size: 40px;
+  font-size: 20px;
  }
  .lheart-icon {
   cursor: pointer;
@@ -176,3 +175,4 @@ button{
 }
 
  
+

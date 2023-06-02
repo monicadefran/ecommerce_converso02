@@ -9,7 +9,7 @@ const DataProvider = ({children}) => {
 
         useEffect (() => {
             axios.get("stock.json").then((res)=> setData(res.data.stock));
-            console.log(setData);
+            
         },[])
 
         const buyProduct = (product) => {
