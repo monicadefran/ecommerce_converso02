@@ -4,7 +4,6 @@ import Products from './Pages/Products';
 import Details from './Pages/Details';
 import NoPage from './Pages/NoPage';
 import Cart from './Pages/Cart.jsx';
-import DataProvider from './Context/ConversoContext';
 
 
 function App() {
